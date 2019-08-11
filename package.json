@@ -1,0 +1,8 @@
+{
+  "name": "fire-emblem-stories",
+  "private": true,
+  "scripts": {
+    "build": "cd back && npm i && npm run build",
+    "start": "cd back && npm start"
+  }
+}
