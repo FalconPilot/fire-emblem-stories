@@ -6,11 +6,13 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently 'npm run dev-back' 'npm run dev-front'",
+    "dev": "npm run clean && npm run init && concurrently 'npm run dev-back' 'npm run dev-front'",
     "dev-back": "dotenv nodemon index.js",
     "dev-front": "cd ../front && npm i && npm run dev",
     "start": "node index.js",
-    "build": "cd ../front && npm i && npm run build"
+    "build": "cd ../front && npm i && npm run build",
+    "clean": "shx rm -rf dist",
+    "init": "shx mkdir dist"
   },
   "repository": {
     "type": "git",
@@ -29,6 +31,7 @@
   "devDependencies": {
     "concurrently": "^4.1.1",
     "dotenv-cli": "^2.0.1",
-    "nodemon": "^1.19.1"
+    "nodemon": "^1.19.1",
+    "shx": "^0.3.2"
   }
 }

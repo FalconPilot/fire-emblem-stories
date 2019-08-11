@@ -1,6 +1,10 @@
 {
   "name": "fire-emblem-stories",
   "private": true,
+  "engines": {
+    "node": "11.10.1",
+    "npm": "6.9.0"
+  },
   "scripts": {
     "build": "cd back && npm i && npm run build",
     "start": "cd back && npm start"

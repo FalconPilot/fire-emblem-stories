@@ -26,7 +26,6 @@
     "redux-saga": "^1.0.5",
     "@emotion/core": "^10.0.15",
     "@emotion/styled": "^10.0.15",
-
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
@@ -42,6 +41,5 @@
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
