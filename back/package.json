@@ -8,8 +8,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "concurrently 'npm run dev-back' 'npm run dev-front'",
     "dev-back": "dotenv nodemon index.js",
-    "dev-front": "cd ../front && npm run dev",
-    "start": "node index.js"
+    "dev-front": "cd ../front && npm i && npm run dev",
+    "start": "npm run build-front && node index.js",
+    "build-front": "cd ../front && npm run build"
   },
   "repository": {
     "type": "git",
