@@ -22,7 +22,11 @@ module.exports = {
     main: path.join(__dirname, 'src', 'index.js')
   },
   output: {
-    filename: '[name].[hash].js',
+    filename: (
+      ENV === ENVIRONMENTS.DEV
+        ? '[name].js'
+        : '[name].[hash].js'
+    ),
     path: path.join(__dirname, '..', 'back', 'dist'),
     publicPath: '/app'
   },
