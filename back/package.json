@@ -10,7 +10,7 @@
     "dev-back": "dotenv nodemon index.js",
     "dev-front": "cd ../front && npm i && npm run dev",
     "start": "npm run build-front && node index.js",
-    "build-front": "cd ../front && npm run build"
+    "build": "cd ../front && npm run build"
   },
   "repository": {
     "type": "git",
