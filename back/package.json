@@ -9,7 +9,7 @@
     "dev": "concurrently 'npm run dev-back' 'npm run dev-front'",
     "dev-back": "dotenv nodemon index.js",
     "dev-front": "cd ../front && npm i && npm run dev",
-    "start": "npm run build-front && node index.js",
+    "start": "node index.js",
     "build": "cd ../front && npm i && npm run build"
   },
   "repository": {
