@@ -1,0 +1,46 @@
+{
+  "name": "fire-emblem-stories-front",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "dotenv webpack --watch-stdin",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FalconPilot/fire-emblem-stories.git"
+  },
+  "author": "falconpilot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FalconPilot/fire-emblem-stories/issues"
+  },
+  "homepage": "https://github.com/FalconPilot/fire-emblem-stories#readme",
+  "dependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "redux": "^4.0.4",
+    "redux-saga": "^1.0.5",
+    "@emotion/core": "^10.0.15",
+    "@emotion/styled": "^10.0.15"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-emotion": "^10.0.15",
+    "babel-plugin-transform-inline-environment-variables": "^0.4.3",
+    "copy-webpack-plugin": "^5.0.4",
+    "css-loader": "^3.2.0",
+    "dotenv-cli": "^2.0.1",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
+  }
+}

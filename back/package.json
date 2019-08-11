@@ -1,0 +1,33 @@
+{
+  "name": "fire-emblem-stories-back",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently 'npm run dev-back' 'npm run dev-front'",
+    "dev-back": "dotenv nodemon index.js",
+    "dev-front": "cd ../front && npm run dev",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FalconPilot/fire-emblem-stories.git"
+  },
+  "author": "falconpilot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FalconPilot/fire-emblem-stories/issues"
+  },
+  "homepage": "https://github.com/FalconPilot/fire-emblem-stories#readme",
+  "dependencies": {
+    "envalid": "^5.0.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.1",
+    "dotenv-cli": "^2.0.1",
+    "nodemon": "^1.19.1"
+  }
+}

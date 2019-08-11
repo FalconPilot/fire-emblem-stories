@@ -1,0 +1,14 @@
+{
+  "presets": [
+    ["@babel/preset-env", {
+      "corejs": 3,
+      "useBuiltIns": "entry"
+    }],
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "babel-plugin-emotion",
+    "babel-plugin-transform-inline-environment-variables",
+    "@babel/plugin-proposal-class-properties"
+  ]
+}
