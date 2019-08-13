@@ -11,6 +11,7 @@ export type SkillLevel
   | 'A+'
 
 export interface Weapon {
+  name: string,
   dmg: number,
   hit: number,
   crit: number,
