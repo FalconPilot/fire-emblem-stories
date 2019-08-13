@@ -2,14 +2,14 @@
   "name": "fire-emblem-stories-back",
   "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.ts",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npm run clean && npm run init && concurrently 'npm run dev-back' 'npm run dev-front'",
-    "dev-back": "dotenv nodemon index.js",
+    "dev-back": "dotenv nodemon ./src/index.ts",
     "dev-front": "cd ../front && npm i && npm run dev",
-    "start": "node index.js",
+    "start": "ts-node ./src/index.ts",
     "build": "cd ../front && npm i && npm run build",
     "clean": "shx rm -rf dist",
     "init": "shx mkdir dist"
@@ -25,8 +25,12 @@
   },
   "homepage": "https://github.com/FalconPilot/fire-emblem-stories#readme",
   "dependencies": {
+    "@types/express": "^4.17.0",
+    "@types/node": "^12.7.1",
     "envalid": "^5.0.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
   },
   "devDependencies": {
     "concurrently": "^4.1.1",
