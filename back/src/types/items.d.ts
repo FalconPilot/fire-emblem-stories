@@ -1,3 +1,5 @@
+import { DamageType } from './combat'
+
 export type SkillLevel
   = 'E'
   | 'E+'
@@ -10,8 +12,17 @@ export type SkillLevel
   | 'A'
   | 'A+'
 
-export interface Weapon {
-  name: string,
+export type WeaponType
+  = 'sword'
+  | 'spear'
+  | 'axe'
+  | 'bow'
+
+export interface GenericItem {
+  name: string
+}
+
+export interface GenericWeapon extends GenericItem {
   dmg: number,
   hit: number,
   crit: number,
@@ -19,7 +30,39 @@ export interface Weapon {
   maxRange: number,
   weight: number,
   level: SkillLevel,
-  maxDurability: number
+  maxDurability: number,
+  damageType: DamageType
+}
+
+export interface Weapon extends GenericWeapon {
+  type: WeaponType
+}
+
+export interface WeaponTypeInfos {
+  type: WeaponType,
+  name: string,
+  strongAgainst: WeaponType,
+  weakAgainst: WeaponType
+}
+
+export interface Shield extends GenericItem {
+  physicalDefense: number,
+  magicalDefense: number,
+  critAvoid: number,
+  weight: number
+}
+
+export interface Trinket extends GenericItem {
+  physicalDefense: number,
+  magicalDefense: number,
+  physicalHit: number,
+  magicalHit: number,
+  physicalDamage: number,
+  magicalDamage: number,
+  physicalCrit: number,
+  magicalCrit: number,
+  critAvoid: number,
+  weight: number
 }
 
 export interface WeaponsList { [s: string]: Weapon }

@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
+import { ThemeProvider } from 'emotion-theming'
+
+import theme from '../../theme'
 
 class App extends Component {
   render () {
     return (
-      <div>
-        Coucou :3
-      </div>
+      <ThemeProvider theme={theme}>
+        Plop
+      </ThemeProvider>
     )
   }
 }
