@@ -18,7 +18,8 @@ const weapons: WeaponsList = {
     maxRange: 1,
     weight: 5,
     level: 'E',
-    maxDurability: 40
+    maxDurability: 40,
+    weakTypes: []
   }),
   iron_sword_plus: createSword({
     name: 'Epée de fer +',
@@ -30,7 +31,8 @@ const weapons: WeaponsList = {
     maxRange: 1,
     weight: 5,
     level: 'E',
-    maxDurability: 45
+    maxDurability: 45,
+    weakTypes: []
   }),
 
   // Steel sword
@@ -44,7 +46,8 @@ const weapons: WeaponsList = {
     maxRange: 1,
     weight: 10,
     level: 'D',
-    maxDurability: 50
+    maxDurability: 50,
+    weakTypes: []
   }),
   steel_sword_plus: createSword({
     name: 'Epée d\'acier +',
@@ -56,7 +59,8 @@ const weapons: WeaponsList = {
     maxRange: 0,
     weight: 10,
     level: 'D',
-    maxDurability: 55
+    maxDurability: 55,
+    weakTypes: []
   })
 
 }

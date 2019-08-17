@@ -1,4 +1,5 @@
 import { DamageType } from './combat'
+import { CharacterType } from './character'
 
 export type SkillLevel
   = 'E'
@@ -31,7 +32,8 @@ export interface GenericWeapon extends GenericItem {
   weight: number,
   level: SkillLevel,
   maxDurability: number,
-  damageType: DamageType
+  damageType: DamageType,
+  weakTypes: CharacterType[]
 }
 
 export interface Weapon extends GenericWeapon {

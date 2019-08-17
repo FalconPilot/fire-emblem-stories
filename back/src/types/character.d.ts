@@ -17,7 +17,7 @@ export interface CharacterClass {
   grade: CharacterClassCategory,
   name: string,
   usesMagic: boolean,
-  type: CharacterType
+  types: CharacterType[]
 }
 
 export interface CharacterStats {

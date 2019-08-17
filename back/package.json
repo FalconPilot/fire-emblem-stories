@@ -30,6 +30,7 @@
     "envalid": "^5.0.0",
     "express": "^4.17.1",
     "ts-node": "^8.3.0",
+    "typeorm": "^0.2.18",
     "typescript": "^3.5.3"
   },
   "devDependencies": {

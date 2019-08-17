@@ -1,8 +1,11 @@
+import { WeaponType } from './items'
+
 export type DamageType
   = 'magical'
   | 'physical'
 
-export interface BattleStats {
+export interface RawBattleStats {
+  weaponType: WeaponType,
   dmg: number,
   hit: number,
   avoid: number,
@@ -12,3 +15,5 @@ export interface BattleStats {
   physicalDefense: number,
   magicalDefense: number
 }
+
+export interface BattleStats extends RawBattleStats {}

@@ -7,7 +7,8 @@ import buildRouter from './router'
 
 const app: App = {
   env: envalid.cleanEnv(process.env, {
-    PORT: envalid.num()
+    PORT: envalid.num(),
+    DATABASE_URL: envalid.url()
   }),
   server: express()
 }

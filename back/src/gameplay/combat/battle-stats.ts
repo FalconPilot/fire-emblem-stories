@@ -1,6 +1,6 @@
 import { Character } from '../../types/character'
 import { Weapon, Trinket, Shield } from '../../types/items'
-import { BattleStats } from '../../types/combat'
+import { RawBattleStats } from '../../types/combat'
 
 type ComputationFunction = (
   character: Character,
@@ -179,13 +179,15 @@ const noTrinket: Trinket = {
   weight: 0
 }
 
-// Compose battle stats from character and weapon
-export const calculateBattleStats = (
+// Compose raw battle stats from character and weapon
+export const calculateRawBattleStats = (
   character: Character,
   weapon: Weapon,
   shield: Shield = noShield,
   trinket: Trinket = noTrinket
-): BattleStats => ({
+): RawBattleStats => ({
+  weaponType: weapon.type,
+
   dmg: getDamage(character, weapon, shield, trinket),
   hit: getHitChance(character, weapon, shield, trinket),
   actionSpeed: getActionSpeed(character, weapon, shield, trinket),
