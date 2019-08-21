@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 import { ThemeProvider } from 'emotion-theming'
 
 import theme from '../../theme'
 
-class App extends Component {
+class App extends React.Component {
   render () {
     return (
       <ThemeProvider theme={theme}>

@@ -16,10 +16,13 @@ module.exports = {
   watch: ENV === ENVIRONMENTS.DEV,
   devtool: 'source-map',
   context: path.join(__dirname),
+  resolve: {
+    extensions: [ '.js', '.jsx', '.ts', '.tsx' ]
+  },
   entry: {
     // 'babel-polyfill': '@babel/polyfill',
     // config: path.join(__dirname, 'src', 'config.js'),
-    main: path.join(__dirname, 'src', 'index.js')
+    main: path.join(__dirname, 'src', 'index.tsx')
   },
   output: {
     filename: (
@@ -54,6 +57,9 @@ module.exports = {
     }, {
       test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
       use: ['file-loader']
+    }, {
+      test: /\.(ts|tsx)$/,
+      use: ['ts-loader']
     }]
   },
   optimization: {

@@ -1,6 +1,8 @@
-const baseSize = 12
+import { AppTheme } from './types/app'
 
-export default {
+const baseSize: number = 12
+
+const mainTheme: AppTheme = {
   sizes: {
     small: baseSize * 0.75,
     normal: baseSize,
@@ -12,3 +14,5 @@ export default {
     h1: baseSize * 2.5
   }
 }
+
+export default mainTheme
